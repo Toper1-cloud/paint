@@ -1,4 +1,106 @@
 from turtle import *
+from turtle import Turtle
+
+def square(t1, color_plit):
+    t1.pendown()
+    t1.color("gray_cor", color_plit)
+    t1.begin_fill()
+    for i in range(4):
+        t1.forward(40)
+        t1.left(90)
+    t1.end_fill()
+    t1.penup()
+
+def simbols(t1, simbol, fw, gradus):
+    t1.right(gradus)
+    t1.forward(fw)
+    t1.pendown()
+    t1.color("dark_gray")
+    t1.write(simbol, font=("Arial", 12, "normal"))
+    t1.penup()
+    t1.left(gradus)
+
+def circle(t1, size):
+    t1.pendown()
+    t1.begin_fill()
+    t1.color("gray_cor")
+    t1.circle(size)
+    t1.end_fill()
+    t1.penup()
+
+def interface():
+    t2 = Turtle()
+    t2.penup()
+    t2.speed(0)
+    t2.hideturtle()
+
+    t2.goto(-200, 80)
+    simbols(t2, "Фон:", 5, 0)
+    t2.goto(-200, 30)
+    square(t2, "black")
+    simbols(t2, "B", -20, 0)
+    t2.goto(-200, -20)
+    square(t2, "white")
+    simbols(t2, "N", -20, 0)
+
+    y_cor = 180
+    fw = 20
+
+    t2.goto(-190, y_cor)
+    square(t2, "red")
+    simbols(t2, "R", fw, 90)
+
+    t2.goto(-130, y_cor)
+    square(t2, "orange")
+    simbols(t2, "O", fw, 90)
+
+    t2.goto(-70, y_cor)
+    square(t2, "yellow")
+    simbols(t2, "Y", fw, 90)
+
+    t2.goto(-10, y_cor)
+    square(t2, "limegreen")
+    simbols(t2, "G", fw, 90)
+
+    t2.goto(50, y_cor)
+    square(t2, "blue")
+    simbols(t2, "L", fw, 90)
+
+    t2.goto(110, y_cor)
+    square(t2, "darkblue")
+    simbols(t2, "B", fw, 90)
+
+    t2.goto(170, y_cor)
+    square(t2, "purple")
+    simbols(t2, "V", fw, 90)
+
+    x = 200
+    fw = 30
+
+    t2.goto(x, 140)
+    circle(t2, 5)
+    simbols(t2, "1", fw, 0)
+
+    t2.goto(x, 100)
+    circle(t2, 10)
+    simbols(t2, "2", fw, 0)
+
+    t2.goto(x, 53)
+    circle(t2, 15)
+    simbols(t2, "3", fw, 0)
+
+    t2.goto(x, 0)
+    circle(t2, 20)
+    simbols(t2, "4", fw, 0)
+
+    t2.goto(x, -60)
+    circle(t2, 25)
+    simbols(t2, "5", fw, 0)
+    return t2
+
+interface()
+
+
 t = Turtle()
 
 
